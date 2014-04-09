@@ -1,0 +1,141 @@
+body {
+	margin: 0px;
+	background: #eee;
+	font-family: Mohave, Helvetica, Arial, sans-serif;
+}
+
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
+#header {
+	width: 100%;
+	height: 470px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+}
+
+#headerIMG {
+	width: 100%;
+	height: 100%;
+	margin-bottom: -460px
+}
+
+#logo {
+	width: 120px;
+	-webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+     
+    overflow:hidden;
+}
+
+#logo:hover {
+	-webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+}
+
+#logoWrap {
+	width: 120px;
+	position: fixed;
+	width:80%;
+    margin: 0 0 0 -40%!important;
+    left:50%;
+    text-align: center;
+    top: 100px;
+}
+
+.logoWrapper a {
+	position: relative;
+	z-index: 2;
+}
+
+/*.scrolledLogo {
+	position: relative!important;
+}*/
+
+.center {
+	margin: auto;
+}
+
+#navWrap {
+	width: 100%;
+}
+
+#nav {
+	width: 500px;
+	position: relative;
+	z-index: 2;
+	margin-top: 350px;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+.scrolledNav {
+	position: fixed;
+	top: 0px;
+}
+
+#nav li {
+	list-style-type: none;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 25px;
+	padding-top: 10px;
+	-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 590px) {
+	#nav li {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	#nav {
+		width: 365px;
+	}
+}
+
+ a:hover {
+	color: #000!important;
+}
+
+#nav li a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: #666;
+}
+
+@font-face {
+    font-family: Mohave;
+    src: url(Mohave-Desktop/);
+    font-weight:400;
+}
+
+#content {
+	z-index: 2;
+	position: relative;
+	background: #eee;
+}
+
+
+#text {
+	height: 900px;
+}

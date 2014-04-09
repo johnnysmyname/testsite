@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<img id="headerIMG" src="img/header.jpg"/>
+			<div id="logoWrap" class="center animated">
+				<a href="index.html">
+					<img id="logo" src="img/logo2.png">
+				</a>
+			</div>
+		</div>
+		<section id="content">
+				<div id="navWrap">
+					<ul id="nav" class="center">
+						<li><a href="#">about</a></li>
+					    <li><a href="#">portfolio</a></li>
+					    <li><a href="#">contact</a></li>
+					    <li><a href="#">lab</a></li>
+					</ul>
+				</div>
+				<div id="text">
+				</div>
+			</section>
+	</div>
+	<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var scrollTop = 100;
+		if($(window).scrollTop() > scrollTop){
+			$('#logoWrap').removeClass('fadeInDownBig');
+			$('#logoWrap').addClass('fadeOutUpBig');
+		}
+		if($(window).scrollTop() < scrollTop){
+			$('#logoWrap').removeClass('fadeOutUpBig');
+			$('#logoWrap').addClass('fadeInDownBig');
+		}
+	})
+});
+
+</script>
+	<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var scrollTop = 70;
+		if($(window).scrollTop() >= scrollTop){
+			$('#logoWrap').addClass('scrolledLogo');
+
+		}
+		if($(window).scrollTop() < scrollTop){
+			$('#logoWrap').removeClass('scrolledLogo');
+		}
+	})
+});
+
+</script>
+<script type="text/javascript">
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<script>
+$(window).scroll(function(e){
+  parallax();
+});
+function parallax(){
+  var scrolled = $(window).scrollTop();
+  $('#header').css('top',-(scrolled*0.2)+'px');
+}
+</script>
+
+</body>
+</html>
